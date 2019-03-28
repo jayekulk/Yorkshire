@@ -7,7 +7,7 @@
 
 	<semantic:MasterPage
 		id="master_page"
-		title="{masterView>/title}"
+		title="{masterView>/title2}"
 		navButtonPress="onNavBack"
 		showNavButton="true">
 		
