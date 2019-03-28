@@ -1,0 +1,210 @@
+<mvc:View
+	controllerName="Yorkshire_Home.controller.Detail_open"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:s="sap.suite.ui.commons"
+	xmlns:semantic="sap.m.semantic">
+
+	<semantic:DetailPage
+		id="detail_page"
+		navButtonPress="onNavBack"
+		showNavButton="{device>/system/phone}"
+		title="{i18n>detailTitle}"
+		busy="{detailView>/busy}"
+		busyIndicatorDelay="{detailView>/delay}">
+
+		<semantic:content>
+		<ObjectHeader
+		id="oh1"
+		responsive="true"
+		fullScreenOptimized="false"
+		
+		
+		title="{lineItemsModel>Address}"
+		titlePress="handleTitlePress"
+		number="OPEN"
+		
+		numberState="Success"
+		backgroundDesign="Translucent">
+		<attributes>
+			
+			<!--<ObjectAttribute  title="address" text="{lineItemsModel>Address}" />-->
+			<ObjectAttribute title="{i18n>Sol_code}" text="{lineItemsModel>Sol_code}" />
+			<ObjectAttribute title="{i18n>Sol_type}" text="{lineItemsModel>Sol_type}" />
+			<ObjectAttribute></ObjectAttribute>
+			<ObjectAttribute title="{i18n>amended}" text="{lineItemsModel>amended}" />
+			<ObjectAttribute title="{i18n>amended_by}" text="{lineItemsModel>amended_by}" />
+			<ObjectAttribute />
+			<ObjectAttribute title="{i18n>total}"   text="£475,000 of £500,000" class="fontStyle" />
+			
+		</attributes>
+		<statuses>
+ 			<ObjectStatus  title="{i18n>remaining}"  text="-25000"	  state="Warning"/>
+			<ObjectStatus  title="{i18n>asset_link}"  icon="{i18n>img10}"  text="-85%"	state="Error"/>
+		</statuses>
+				
+	<headerContainer>
+		<IconTabBar
+				id="iconTabBar"
+				expandable= "false"
+				class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter
+						id="iconTabBarFilter1"
+						text="{i18n>sol_details}">
+						<content>
+						
+						
+		<VBox class="sapUiLargeMarginBegin">
+		<f:SimpleForm id="SimpleFormChange480_Trial"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			columnsXL="3"
+			columnsL="2"
+			columnsM="2"
+			singleContainerFullSize="false" >
+			<f:content>
+				<core:Title text="{i18n>sol_overview}" class="fontHeadcss" />
+				<Label text="{i18n>batch_code}" />
+				<Text text="MTM 100124 Delivery - Combined Medium Treatment West"/>
+				<Label text="{i18n>contract_partnr}" />
+				<Text text="AMP6 Byzak Ltd"/>
+				
+				<!--<Input value="{ZIPCode}">
+					<layoutData>
+						<l:GridData span="XL2 L2 M3 S4" />
+					</layoutData>
+				</Input>-->
+				
+				<core:Title text="{i18n>attrb}" class="fontHeadcss" />
+				<Label text="{i18n>service_typ}" />
+				<Text text="--"/>
+				<Label text="{i18n>extent_work}" />
+				<Text text="--"/>
+				<Label text="{i18n>grnd_cond}" />
+				<Text text="--"/>
+				<Label text="{i18n>contamin_grnd}" />
+				<Text text="0"/>
+				<Label text="{i18n>serv_diver}" />
+				<Text text="--"/>
+				<Label text="{i18n>weather}" />
+				<Text text="--"/>
+				<Label text="{i18n>scope_ch}" />
+				<Text text="--"/>
+				
+				<core:Title text="" />
+				<core:Title text="{i18n>carbon_att}" class="fontHeadcss" />
+				<Label text="{i18n>labor_hrs_ass}" />
+				<Text text="--"/>
+				<Label text="{i18n>progm_wks_ass}" />
+				<Text text="--"/>
+				<Label text="{i18n>fuel_ltrs_ass}" />
+				<Text text="--"/>
+				
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+				</content>
+			</IconTabFilter>
+			
+					<IconTabFilter
+						id="iconTabBarFilter2"
+						text="{i18n>work_items}">
+						<content>
+						  	
+				
+					<Toolbar id="lineItemsToolbar" class="detailToolbar">
+						<Title text="{detailView>/lineItemListTitle}"/>
+						<Title id="lineItemsHeader"	text="(4)"/>
+					<ToolbarSpacer />
+					<core:Icon src="{i18n>img4}"  class="spacer4"/>
+					<core:Icon src="{i18n>img14}"  class="spacer4"  />
+					<core:Icon src="{i18n>img15}"  class="spacer4"/>
+					</Toolbar>
+					
+					
+					<HBox>
+					<CheckBox class="ckbox"/>
+					<Panel	id="workitemPanel_1" expandable="true" expanded="false" headerText="Panel with a header text" 
+					width="auto" class="workitemPanel">
+						<content>
+						</content>
+						</Panel>
+					</HBox>	
+					</content>	
+						
+					</IconTabFilter>
+					<IconTabFilter
+						id="iconTabBarFilter3"
+						text="{i18n>change_log}">
+						<content>
+							<s:Timeline
+								id="idTimeline"
+								lazyLoading="true"
+								noDataText="No Data"
+								showHeaderBar="false"
+								scrollingFadeout="None"
+								enableModelFilter="false"
+								enableSocial= "true"
+								showIcons="true">
+							<s:content>
+							<s:TimelineItem
+								dateTime="12/11/2017 at 3:00 PM"
+								text="Sample text for a note type item Lorem ipsumlor sit amet."
+								userName="John Miller"
+								userPicture="{i18n>img16}"
+								icon="{i18n>img19}"
+								title="Information"
+								>
+							</s:TimelineItem>
+							<s:TimelineItem
+								dateTime="12/11/2017 at 3:00 PM"
+								text="Sample text for a note type item Lorem ipsumlor sit amet."
+								userName="John Miller"
+								userPicture="{i18n>img17}"
+								icon="{i18n>img19}"
+								title="Action for Partner"
+								>
+							</s:TimelineItem>
+							
+							
+							</s:content>
+							
+							
+							</s:Timeline>
+						</content>
+					</IconTabFilter>
+
+					<IconTabFilter
+						id="iconTabBarFilter4"
+						text="{i18n>workflow}">
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+	</headerContainer>
+	
+	
+		</ObjectHeader>
+		</semantic:content>
+
+		<semantic:positiveAction>
+					<semantic:PositiveAction text="Send" press="onSemanticButtonPress"/>
+		</semantic:positiveAction>
+		
+		
+	
+		
+	
+
+	</semantic:DetailPage>
+
+</mvc:View>

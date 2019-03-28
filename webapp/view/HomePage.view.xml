@@ -1,0 +1,60 @@
+<mvc:View controllerName="Yorkshire_Home.controller.HomePage" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m"  xmlns:c="sap.ui.core">
+	<App>
+		<Page title="{i18n>title}" showHeader="false" class="main_page">
+			<content>
+				<!--<Toolbar enabled="true">
+					<Image src="images/u14.png"/>
+					<Button icon="sap-icon://nav-back"/>
+					<Button icon="sap-icon://home"/>
+					<Image src="images/u19.png" height="32px" width="83px"/>
+					<ToolbarSpacer/>
+					<Text text="Home" width="47px"/>
+					<c:Icon src="sap-icon://navigation-down-arrow"/>
+					<ToolbarSpacer/>
+					<c:Icon src="sap-icon://search"/>
+					<Button icon="sap-icon://ui-notifications"/>
+				</Toolbar>-->
+				<Bar class="barcss">
+					<contentLeft>
+						<Image src="{i18n>img1}" class="spacer_1"/>
+						<Image src="{i18n>img2}" height="31px" width="81px"/>
+					</contentLeft>
+					<contentMiddle>
+						<Label text="{i18n>home}" class="fontdesign_1 spacer_2"/>
+						<c:Icon src="{i18n>img3}"/>
+					</contentMiddle>
+					<contentRight>
+						<Button icon="{i18n>img4}" press="onSearchPress"/>
+						<Button icon="{i18n>img5}"/>
+					</contentRight>
+				</Bar>
+				<IconTabBar expandable="false" class="trans_parent">
+					<items>
+						<IconTabFilter text="{i18n>my_home}" class="trans_parent">
+							<GenericTile header="{i18n>dct}" class="sapUiSmallMarginBegin sapUiTinyMarginTop tileLayout" press="onDCTpress">
+								<tileContent>
+									<TileContent footer="{i18n>data_capture}">
+										<content>
+											<ImageContent src="{i18n>img6}"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+							<GenericTile header="{i18n>invoice_mngr}" class="sapUiMediumMargin sapUiTinyMarginTop tileLayout">
+								<tileContent>
+									<TileContent footer="{i18n>manage_inv}">
+										<content>
+											<ImageContent src="{i18n>img7}"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+						</IconTabFilter>
+						<IconTabFilter></IconTabFilter>
+					</items>
+				</IconTabBar>
+			</content>
+		</Page>
+	</App>
+</mvc:View>

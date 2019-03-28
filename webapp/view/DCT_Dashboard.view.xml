@@ -1,0 +1,114 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:c="sap.ui.core"
+	controllerName="Yorkshire_Home.controller.DCT_Dashboard" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>title}" showHeader="false" class="main_page">
+				<content>
+					<Bar class="barcss">
+						<contentLeft>
+							<Image src="{i18n>img1}" class="spacer_1"/>
+							<Button icon="sap-icon://nav-back" press="onBackPress"/>
+							<Button icon="sap-icon://home" press="onHomePress"/>
+							<Image src="{i18n>img2}" height="31px" width="81px"/>
+						</contentLeft>
+						<contentMiddle>
+							<Label text="{i18n>dct_home}" class="fontdesign_1 spacer_2"/>
+							<c:Icon src="{i18n>img3}"/>
+						</contentMiddle>
+						<contentRight>
+							<Button icon="{i18n>img4}" press="onSearchPress"/>
+							<Button icon="{i18n>img5}"/>
+						</contentRight>
+					</Bar>
+					<ScrollContainer height="100%" width="80%" class="ContainerCss" horizontal="true" vertical="true" focusable="true">
+						<Panel class="panelcss1">
+							<HBox>
+								<VBox>
+									<Text text="{i18n>solutionid}"/>
+									<ComboBox class="comboStyle"/>
+								</VBox>
+								<VBox>
+									<Text text="{i18n>contract_partner}"/>
+									<ComboBox class="comboStyle"/>
+								</VBox>
+								<VBox>
+									<Text text="{i18n>solution_description}"/>
+									<Input showValueHelp="true" class="comboStyle"/>
+								</VBox>
+							</HBox>
+						</Panel>
+						<Panel class="panelcssx1">
+							<VBox width= "3rem">
+								<Text text="60" class="Numberx"/>
+								<Image src="{i18n>img8}" class="imagex"/>
+							</VBox>
+						</Panel>
+						<Panel class="panelcssx2">
+							<VBox width= "3rem">
+								<Text text="60" class="Numberx"/>
+								<Image src="{i18n>img9}" class="imagex"/>
+							</VBox>
+						</Panel>
+						<Panel class="panelcssx3">
+							<VBox width= "3rem">
+								<Text text="80" class="Numberx"/>
+								<Image src="{i18n>img8}" class="imagex"/>
+							</VBox>
+						</Panel>
+						<Panel class="panelcssx4">
+							<VBox width= "3rem">
+								<Text text="20" class="Numberx"/>
+								<Image src="{i18n>img8}" class="imagex4"/>
+							</VBox>
+						</Panel>
+						<Panel class="panelcss2" width="101%">
+							<GenericTile frameType="TwoByOne" header="{i18n>open_soln}" subheader="{i18n>optional_subt}" press="handleOpenSolution" class="sapUiSmallMarginBegin tileWidth">
+								<tileContent>
+									<TileContent frameType="TwoByOne">
+										<content>
+											<Label text="{i18n>viewall}" class="viewallcss"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+							<GenericTile frameType="TwoByOne" header="{i18n>rej_soln}" subheader="{i18n>optional_subt}" press="handleRejectSolution" class="sapUiSmallMarginBegin tileWidth">
+								<tileContent>
+									<TileContent>
+										<content>
+											<Label text="{i18n>viewall}" class="viewallcss"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+							<GenericTile frameType="TwoByOne" header="{i18n>submit_review}" subheader="{i18n>optional_subt}" press="handleSubmitSolution" class="sapUiSmallMarginBegin tileWidth">
+								<tileContent>
+									<TileContent>
+										<content>
+											<Label text="{i18n>viewall}" class="viewallcss"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+						</Panel>
+						<Panel class="panelcss3">
+							<GenericTile frameType="TwoByOne" header="New Solutions" subheader="New Solutions not started" class="sapUiSmallMarginBegin tileWidth2">
+								<tileContent>
+									<TileContent>
+										<content>
+											<Label text="{i18n>viewall}" class="viewallcss4"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+						</Panel>
+						<Panel class="panelcss4">
+							<Table/>
+						</Panel>
+					</ScrollContainer>
+				</content>
+				<Bar class="footercss"/>
+				<Button type="Emphasized" text="{i18n>AdSeacrh}" class="adsearch"/>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

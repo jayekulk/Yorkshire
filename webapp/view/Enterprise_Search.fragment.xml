@@ -1,0 +1,11 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ResponsivePopover
+		class="sapUiPopupWithPadding"
+		placement="PreferredBottomOrFlip" showHeader="false" showCloseButton="true" >
+		<content>
+			<SearchField />
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>
